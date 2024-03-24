@@ -15,6 +15,7 @@ This will open a Menu where you can choose what you want to do.
 Opening the DexNav will show you all Encounters at the current Time in the current route. Navigate with the movement keys and select the pokemon you want to encounter with the select key.
 To the left you will see where you can encounter the Pokémon (Grass, Water, Old Rod, Good Rod, Super Rod, Rocksmash).
 To exit the DexNav without choosing a Pokemon, press the "Back" key.
+![image](https://github.com/BuezliBueb/BB-s-Radical-Red-Utilities-for-Infinite-Fusion/assets/164735539/964fd138-cc7b-496a-a367-61af7c2bf123)
 
 Pokévial will heal all Pokemon. You have 1 + number of Gymbadges chargesonthe Pokévial that recharge when healing in the Pokécenter.
 
