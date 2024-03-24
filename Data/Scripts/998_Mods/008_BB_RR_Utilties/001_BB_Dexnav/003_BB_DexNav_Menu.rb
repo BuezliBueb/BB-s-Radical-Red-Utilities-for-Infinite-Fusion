@@ -5,7 +5,7 @@ RRMenuCommands.register("DexNav",{
   "effect"      => proc{
     pbPlayDecisionSE
     x = pbUseDexNav
-    if x == -1
+    if x == false
       x = -1
     else
       $PokemonTemp.dex_nav_ui.startDexNavInput

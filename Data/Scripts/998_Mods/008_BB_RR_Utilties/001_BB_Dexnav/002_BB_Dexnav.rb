@@ -24,11 +24,15 @@ end
 def displayDexNav(yPokemonList = [])
   return if $PokemonTemp.dex_nav_ui != nil
   $PokemonTemp.dex_nav_ui = Dex_Nav_UI.new(yPokemonList)
+  return $PokemonTemp.dex_nav_ui
 end
 def pbUseDexNav
   $PokemonTemp.dex_nav = [0, 0, 0, []] if !$PokemonTemp.dex_nav
   xPokemonList = listPokemonInCurrentRouteForDexNav()
-  displayDexNav(xPokemonList)
+  x = displayDexNav(xPokemonList)
+  if x == -1
+        return false
+  end
   pbWait(10)
   return true
 end
