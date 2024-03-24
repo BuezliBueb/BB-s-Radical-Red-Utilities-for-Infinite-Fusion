@@ -39,9 +39,6 @@ class Dex_Nav_UI
     @index = 0
     if @maxIndex == 0
       pbMessage(_INTL("No Pokemon Found"))
-      @sprites["backgroundLand"].visible = false
-      pbDisposeSpriteHash(@sprites)
-      @viewport.dispose if @viewport != nil
       pbDexNavCancle
       return
     end
