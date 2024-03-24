@@ -28,7 +28,7 @@
 
 ## Pokevial:
 
-<p>Pokévial will heal all Pokemon. You have 1 + number of Gymbadges chargesonthe Pokévial that recharge when healing in the Pokécenter.</p>
+<p>Pokévial will heal all Pokemon. You have (1 + the number of gym badges) charges on the Pokévial that recharge when healing in the Pokécenter.</p>
 
 ## Time changer:
 
