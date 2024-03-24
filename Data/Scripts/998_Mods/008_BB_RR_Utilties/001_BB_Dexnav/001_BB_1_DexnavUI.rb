@@ -11,38 +11,44 @@ class Dex_Nav_UI
   ICON_LINE_END = 450
 
   def initialize(xPokemonList)
-    @PokemonList = xPokemonList
-    @viewport = Viewport.new(0, 0, Graphics.width, Graphics.height)
-    @viewport.z = 99
-    @sprites = {}
-    @sprites["backgroundLand"] = IconSprite.new(0, 0, @viewport)
-    @sprites["backgroundLand"].setBitmap("Graphics/Mods/DexNav/background")
-    @sprites["backgroundLand"].zoom_x = 2
-    @sprites["backgroundLand"].zoom_y = 2
-    @sprites["backgroundLand"].visible = true
-    @index = 0
-    @maxIndex = 0
-    @pokemonList = {}
-    @current_x = 50
-    @current_y = -50
-    @linebreakindex = {}
-    @linebreakindex["size"] = -1
-    @lines = -1
-    @current_x_water = 50
-    @current_y_water =  Graphics.height/2
-    @startWater = 0
-    @currLine = 0
-    @encounter = 0
-    @selected = false
-    setLineSize(0,0)
-    displayPokemonList()
-    @index = 0
-    if @maxIndex == 0
+    amountInRoute = 0
+    for x in xPokemonList
+		for y in x
+			amountInRoute += y.size
+		end
+	end
+    if amountInRoute <= 70
       pbMessage(_INTL("No Pokemon Found"))
-      pbDexNavCancle
-      return
-    end
-    @sprites[@index.to_s + "_outline"].visible = true
+      return -1
+    else
+		@PokemonList = xPokemonList
+		@viewport = Viewport.new(0, 0, Graphics.width, Graphics.height)
+		@viewport.z = 99
+		@sprites = {}
+		@sprites["backgroundLand"] = IconSprite.new(0, 0, @viewport)
+		@sprites["backgroundLand"].setBitmap("Graphics/Mods/DexNav/background")
+		@sprites["backgroundLand"].zoom_x = 2
+		@sprites["backgroundLand"].zoom_y = 2
+		@sprites["backgroundLand"].visible = true
+		@index = 0
+		@maxIndex = 0
+		@pokemonList = {}
+		@current_x = 50
+		@current_y = -50
+		@linebreakindex = {}
+		@linebreakindex["size"] = -1
+		@lines = -1
+		@current_x_water = 50
+		@current_y_water =  Graphics.height/2
+		@startWater = 0
+		@currLine = 0
+		@encounter = 0
+		@selected = false
+		setLineSize(0,0)
+		displayPokemonList()
+		@index = 0
+		@sprites[@index.to_s + "_outline"].visible = true
+	end
   end
   def getEncounter
     return @encounter

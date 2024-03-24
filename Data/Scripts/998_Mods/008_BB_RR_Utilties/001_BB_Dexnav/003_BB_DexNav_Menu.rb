@@ -4,7 +4,11 @@ RRMenuCommands.register("DexNav",{
   "description" => _INTL("Use Dex Nav"),
   "effect"      => proc{
     pbPlayDecisionSE
-    pbUseDexNav
-    $PokemonTemp.dex_nav_ui.startDexNavInput
+    x = pbUseDexNav
+    if x == -1
+      x = -1
+    else
+      $PokemonTemp.dex_nav_ui.startDexNavInput
+    end
     }
   })
