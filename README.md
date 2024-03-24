@@ -10,6 +10,7 @@ How to use:
 ![image](https://github.com/BuezliBueb/BB-s-Radical-Red-Utilities-for-Infinite-Fusion/assets/164735539/dc799027-0dc9-4af8-ba20-d8c942b502b9)
 Open the Menu using the Keybind for "R". To check what Key you have bound "R" to, pres F1
 This will open a Menu where you can choose what you want to do.
+![image](https://github.com/BuezliBueb/BB-s-Radical-Red-Utilities-for-Infinite-Fusion/assets/164735539/d9b0e715-d9cb-45e0-9943-8e4843c2cc0f)
 
 Opening the DexNav will show you all Encounters at the current Time in the current route. Navigate with the movement keys and select the pokemon you want to encounter with the select key.
 To the left you will see where you can encounter the Pokémon (Grass, Water, Old Rod, Good Rod, Super Rod, Rocksmash).
