@@ -11,14 +11,15 @@ class Dex_Nav_UI
   ICON_LINE_END = 450
 
   def initialize(xPokemonList)
-    amountInRoute = 0
+    @amountInRoute = 0
     for x in xPokemonList
 		for y in x
-			amountInRoute += y.size
+			@amountInRoute += y.size
 		end
 	end
-    if amountInRoute <= 70
+    if @amountInRoute <= 70
       pbMessage(_INTL("No Pokemon Found"))
+	  $PokemonTemp.dex_nav_ui = nil
       return -1
     else
 		@PokemonList = xPokemonList
@@ -49,6 +50,9 @@ class Dex_Nav_UI
 		@index = 0
 		@sprites[@index.to_s + "_outline"].visible = true
 	end
+  end
+  def amountInRoute
+	return @amountInRoute
   end
   def getEncounter
     return @encounter
